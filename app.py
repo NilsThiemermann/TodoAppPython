@@ -26,7 +26,7 @@ def createTodos():
 
 def forget(widgets):
     for widget in widgets:
-        forget(widget)
+        widget.forget()
 
 menu = Menu.Menu(root)
 

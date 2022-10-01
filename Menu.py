@@ -21,7 +21,7 @@ class Menu:
 
     def selectTodos(self):
         #remove the widgets from the frame
-        print(widgets)
+        #print(widgets)
         app.forget(widgets)
 
         return app.selectTodos()

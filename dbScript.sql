@@ -21,6 +21,7 @@ CREATE VIEW IF NOT EXISTS view_Todo
 AS
 SELECT t.todo, t.expenditure_of_time, i.[name], t.create_date, t.expiry_date FROM tbl_Todo as t LEFT JOIN tbl_Importance as i ON t.fk_importance = i.id ORDER BY expiry_date DESC;
 
+/*
 INSERT INTO tbl_Todo(todo, expenditure_of_time, fk_importance, expiry_date)
 VALUES("This App", 240, 2, CURRENT_TIMESTAMP);
 
@@ -32,3 +33,4 @@ VALUES("Important");
 
 INSERT INTO tbl_Importance([name])
 VALUES("Very important");
+*/
