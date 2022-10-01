@@ -18,14 +18,15 @@ sqlFile = open("dbScript.sql")
 sqlStr = sqlFile.read()
 cur.executescript(sqlStr)
 
-
-
-
 def selectTodos():
-    SelectTodos.Select(root)
+    return SelectTodos.Select(root)
 
 def createTodos():
-    CreateTodos.Create(root)
+    return CreateTodos.Create(root)
+
+def forget(widgets):
+    for widget in widgets:
+        forget(widget)
 
 menu = Menu.Menu(root)
 

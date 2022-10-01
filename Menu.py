@@ -2,6 +2,7 @@ from tkinter import *
 
 import app
 
+widgets = []
 
 class Menu:
     def __init__(self, master):
@@ -14,10 +15,19 @@ class Menu:
         self.selectTodosBtn.pack()
         self.createTodosBtn.pack()
 
+        widgets.append(self.menuFrame)
+        widgets.append(self.selectTodosBtn)
+        widgets.append(self.createTodosBtn)
+
     def selectTodos(self):
-        #self.menuFrame.destroy()
+        #remove the widgets from the frame
+        print(widgets)
+        app.forget(widgets)
+
         return app.selectTodos()
 
     def createTodos(self):
-        #self.menuFrame.destroy()
+        #remove the widgets from the frame
+        app.forget(widgets)
+
         return app.createTodos()

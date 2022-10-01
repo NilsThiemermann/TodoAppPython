@@ -1,6 +1,13 @@
 from tkinter import *
+import sqlite3
+
+import app
 
 class Select:
     def __init__(self, master):
-        self.selectFrame = Frame(master)
-        self.selectFrame.pack()
+        conn = app.conn
+        cur = conn.cursor()
+
+        selected = cur.execute("""SELECT * FROM view_Todo""")
+
+        print(selected)
