@@ -29,5 +29,5 @@ class Menu:
     def createTodos(self):
         #remove the widgets from the frame
         app.forget(widgets)
-
+        
         return app.createTodos()

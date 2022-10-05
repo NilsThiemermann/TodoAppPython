@@ -4,6 +4,8 @@ import sqlite3
 import Menu
 import CreateTodos
 import SelectTodos
+import DeleteTodo
+import EditTodo
 
 root = Tk()
 root.title("Todo - App")
@@ -24,9 +26,19 @@ def selectTodos():
 def createTodos():
     return CreateTodos.Create(root)
 
+def deleteTodo(id):
+    return DeleteTodo.Delete(id)
+
+def editTodo():
+    return EditTodo.Edit()
+
 def forget(widgets):
     for widget in widgets:
         widget.forget()
+
+def grid_forget(widgets):
+    for widget in widgets:
+        widget.grid_forget()
 
 menu = Menu.Menu(root)
 
