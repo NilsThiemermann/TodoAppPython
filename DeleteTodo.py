@@ -8,11 +8,15 @@ class Delete:
 
     def __init__(self, id):
         
+        self.deleteData(id)
+
+        app.selectTodos()
+
+    def deleteData(_, id):
+        
         cur = conn.cursor()
 
         sql = """DELETE FROM tbl_Todo WHERE id = ?"""
 
-        cur.execute(sql, id)
+        cur.execute(sql, [(id)])
         conn.commit()
-
-        app.selectTodos()

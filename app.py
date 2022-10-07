@@ -29,8 +29,8 @@ def createTodos():
 def deleteTodo(id):
     return DeleteTodo.Delete(id)
 
-def editTodo():
-    return EditTodo.Edit()
+def editTodo(id):
+    return EditTodo.Edit(root,id)
 
 def forget(widgets):
     for widget in widgets:
